@@ -1,0 +1,9 @@
+Building Mouse
+
+See doc/readme-qt.rst for instructions on building Mouse QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Mouse.
+
+See doc/build-*.txt for instructions on building moused,
+the intended-for-services, no-graphical-interface, reference
+implementation of Mouse.
