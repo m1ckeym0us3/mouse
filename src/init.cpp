@@ -292,7 +292,7 @@ strUsage += "\n" + _("Masternode options:") + "\n";
     strUsage += "\n" + _("Darksend options:") + "\n";
     strUsage += "  -enabledarksend=<n>          " + _("Enable use of automated darksend for funds stored in this wallet (0-1, default: 0)") + "\n";
     strUsage += "  -darksendrounds=<n>          " + _("Use N separate masternodes to anonymize funds  (2-8, default: 2)") + "\n";
-    strUsage += "  -anonymizeharvestamount=<n> " + _("Keep N Mouse anonymized (default: 0)") + "\n";
+    strUsage += "  -anonymizemouseamount=<n> " + _("Keep N Mouse anonymized (default: 0)") + "\n";
     strUsage += "  -liquidityprovider=<n>       " + _("Provide liquidity to Darksend by infrequently mixing coins on a continual basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, low fees)") + "\n";
 
     strUsage += "\n" + _("InstantX options:") + "\n";
@@ -1047,7 +1047,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         nDarksendRounds = 99999;
     }
 
-    nAnonymizeMouseAmount = GetArg("-anonymizeharvestamount", 0);
+    nAnonymizeMouseAmount = GetArg("-anonymizemouseamount", 0);
     if(nAnonymizeMouseAmount > 999999) nAnonymizeMouseAmount = 999999;
     if(nAnonymizeMouseAmount < 2) nAnonymizeMouseAmount = 2;
 
